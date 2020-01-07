@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: Extract branch name
       shell: bash
-      run: echo "##[set-output name=branch;]$(echo `git ls-remote git@github.com:hagel86/action_testing.git | grep "/branch-release-" | sed 's?.*refs/heads/??' | tail -1`)"
+      run: echo "##[set-output name=branch;]$(echo `git ls-remote -h https://${{ secrets.REPO_TOKEN }}@github.com/hagel86/action_testing.git | grep "/branch-release-" | sed 's?.*refs/heads/??' | tail -1`)"
       id: release_branch
     - name: Checkout
       uses: actions/checkout@v1
@@ -19,6 +19,8 @@ jobs:
         development_branch: 'master'
         allow_ff: false
         user_name: prism-builds
+        push_token: 'REPO_TOKEN'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
       
