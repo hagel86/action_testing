@@ -1,14 +1,14 @@
 name: 'Merge release branch into Dev branch'
 on:
   schedule:
-    - cron:  '*/15 * * * *'
+    - cron:  '*/5 * * * *'
 jobs:
   nightly-merge:
     runs-on: ubuntu-latest
     steps:
     - name: Extract branch name
       shell: bash
-      run: echo "##[set-output name=branch;]$(echo `git ls-remote git@github.com:RSEnergyGroup/explorer.git | grep "/branch-release-" | sed 's?.*refs/heads/??' | tail -1`)"
+      run: echo "##[set-output name=branch;]$(echo `git ls-remote git@github.com:hagel86/action_testing.git | grep "/branch-release-" | sed 's?.*refs/heads/??' | tail -1`)"
       id: release_branch
     - name: Checkout
       uses: actions/checkout@v1
