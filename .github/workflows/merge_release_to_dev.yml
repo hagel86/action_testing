@@ -1,4 +1,4 @@
-name: 'Merge release branch into Dev branch'
+name: 'Release -> Develop Branch'
 on:
   schedule:
     - cron:  '*/10 * * * *'
