@@ -1,7 +1,7 @@
 name: 'Merge release branch into Dev branch'
 on:
   schedule:
-    - cron:  '* * * * *'
+    - cron:  '*/15 * * * *'
 jobs:
   nightly-merge:
     runs-on: ubuntu-latest
