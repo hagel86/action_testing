@@ -1,4 +1,4 @@
-name: 'Job to merge release branches into Dev branch'
+name: 'Merge release branch into Dev branch'
 on:
   schedule:
     - cron:  '* * * * *'
