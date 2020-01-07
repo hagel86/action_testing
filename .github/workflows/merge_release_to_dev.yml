@@ -1,7 +1,7 @@
 - name: Extract branch name
-      shell: bash
-      run: echo "##[set-output name=branch;]$(echo `git ls-remote --heads | grep "/branch-release-" | sed 's?.*refs/heads/??' | tail -1`)"
-      id: release_branch
+  shell: bash
+  run: echo "##[set-output name=branch;]$(echo `git ls-remote --heads | grep "/branch-release-" | sed 's?.*refs/heads/??' | tail -1`)"
+  id: release_branch
 
 - name: 'Merge Release into Dev'
 
