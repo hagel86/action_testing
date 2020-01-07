@@ -15,8 +15,8 @@ jobs:
     - name: Nightly Merge
       uses: robotology/gh-action-nightly-merge@v1.0.3
       with:
-        stable_branch: ${{ steps.release_branch.outputs.branch }}
-        development_branch: 'master'
+        stable_branch: 'master'
+        development_branch: ${{ steps.release_branch.outputs.branch }}
         allow_ff: false
         user_name: prism-builds
         push_token: 'REPO_TOKEN'
