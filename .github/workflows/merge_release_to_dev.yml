@@ -8,7 +8,7 @@
   on:
     push:
       branches:
-        - ${{ steps.extract_branch.outputs.branch }}
+        - ${{ steps.release_branch.outputs.branch }}
 
   jobs:
     nightly-merge:
