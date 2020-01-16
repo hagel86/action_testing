@@ -18,7 +18,7 @@ jobs:
         stable_branch: ${{ steps.release_branch.outputs.branch }}
         development_branch: 'master'
         allow_ff: false
-        user_name: prism-builds
+        user_name: 'prism-builds'
         push_token: 'REPO_TOKEN'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
