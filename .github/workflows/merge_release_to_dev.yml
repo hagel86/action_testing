@@ -22,5 +22,5 @@ jobs:
         user_name: 'prism-builds'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        REPO_TOKEN: ${{ secrets.PRISM_BUILDS_REPO_TOKEN }}
+        REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
       
