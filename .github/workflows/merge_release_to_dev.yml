@@ -1,7 +1,7 @@
 name: 'Release -> Develop Branch'
 on:
   schedule:
-    - cron:  '*/10 * * * *'
+    - cron:  '1 1 1 1 *'
 jobs:
   nightly-merge:
     runs-on: ubuntu-latest
